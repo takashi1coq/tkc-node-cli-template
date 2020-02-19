@@ -1,0 +1,32 @@
+{
+  "name": "tkc-node-cli-template",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --config ./config/webpack.dev.js --watch",
+    "prod": "webpack --config ./config/webpack.prod.js"
+  },
+  "bin": {
+    "tkc-template": "./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takashi1coq/tkc-node-cli-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takashi1coq/tkc-node-cli-template/issues"
+  },
+  "homepage": "https://github.com/takashi1coq/tkc-node-cli-template#readme",
+  "devDependencies": {
+    "@types/node": "^13.7.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {}
+}
