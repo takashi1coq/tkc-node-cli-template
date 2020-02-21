@@ -1,4 +1,4 @@
-import { listPrompt, selectPrompt } from "src/prompts/prompts"
+import { listPrompt, selectPrompt } from "src/prompts"
 
 const main = async () => {
   const list = await listPrompt('Type comma-separated keywords')
