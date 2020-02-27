@@ -7,8 +7,7 @@
     "prod": "webpack --config ./config/webpack.prod.js",
     "lint": "eslint src -c .eslintrc.json --ext tsx,ts; exit 0",
     "lint:fix": "eslint src -c .eslintrc.json --ext tsx,ts --fix; exit 0 ",
-    "test": "node ./dist/main.js"
-
+    "test": "jest"
   },
   "bin": {
     "tkc-template": "./dist/main.js"
@@ -16,6 +15,21 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/takashi1coq/tkc-node-cli-template.git"
+  },
+  "jest": {
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testMatch": [
+      "**/test/**/*.test.ts"
+    ],
+    "modulePaths": [ "<rootDir>" ]
   },
   "keywords": [],
   "author": "",
@@ -25,6 +39,7 @@
   },
   "homepage": "https://github.com/takashi1coq/tkc-node-cli-template#readme",
   "devDependencies": {
+    "@types/jest": "^25.1.3",
     "@types/node": "^13.7.2",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
@@ -33,8 +48,10 @@
     "eslint-import-resolver-webpack": "^0.12.1",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
+    "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
     "webpack": "^4.41.6",
