@@ -1,14 +1,9 @@
-import LineCount from "src/my-fs";
+import { createDir } from "src/my-fs";
 
-jest.mock('fs', () => ({
-  readFileSync: jest.fn(() => `first\n 2\n 4`)
-}))
-
-describe('sample', () => {
-  const path = 'dummy'
-  test('LineCount', () => {
-    const result = LineCount(path)
-
-    expect(result).toBe(3)
+describe('main', () => {
+  test('test', () => {
+    const result = createDir('./test/dummyDir/input')
+    console.dir(result)
   });
 });
+
